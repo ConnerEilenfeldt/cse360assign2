@@ -2,7 +2,8 @@
  * @author Conner Eilenfeldt
  * CSE360 85141
  * Assignment 2
- * AddingMachine
+ * AddingMachine adds and subtracts integers to/from a total and keeps a transaction
+ * history
  */
 package cse360assign2;
 
@@ -20,7 +21,7 @@ public class AddingMachine
 	}
 	
 	/**
-	 * add adds value to the total and records transaction in history
+	 * add adds value to the total and updates transaction history
 	 * @param value the value to be added
 	 */
 	public void add(int value)
@@ -30,7 +31,7 @@ public class AddingMachine
 	}
 
 	/**
-	 * subtract subtracts value from the total and records transaction in history
+	 * subtract subtracts value from the total and updates transaction history
 	 * @param value the value to be subtracted
 	 */
 	public void subtract(int value)
