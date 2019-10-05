@@ -9,17 +9,27 @@ package cse360assign2;
 
 public class AddingMachine
 {
-	private int total = 0;
-	private String history = "0";
-	
+	private int total;
+	private String history;
+
 	/**
 	 * AddingMachine constructor
 	 */
 	public AddingMachine()
 	{
-		
+		total = 0;
+		history = "0";
 	}
-	
+
+	/**
+	 * getTotal returns the current total
+	 * @return total
+	 */
+	public int getTotal()
+	{
+		return total;
+	}
+
 	/**
 	 * add adds value to the total and updates transaction history
 	 * @param value the value to be added
@@ -39,16 +49,7 @@ public class AddingMachine
 		total -= value;
 		history += " - " + value;
 	}
-	
-	/**
-	 * getTotal returns the current total
-	 * @return total
-	 */
-	public int getTotal()
-	{
-		return total;
-	}
-	
+
 	/**
 	 * toString returns the transaction history
 	 * @return history
@@ -56,5 +57,14 @@ public class AddingMachine
 	public String toString()
 	{
 		return history;
+	}
+
+	/**
+	 * clear resets total and history
+	 */
+	public void clear()
+	{
+		total = 0;
+		history = "0";
 	}
 }

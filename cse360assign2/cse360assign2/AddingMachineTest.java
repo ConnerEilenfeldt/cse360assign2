@@ -62,6 +62,24 @@ class AddingMachineTest
 		assertTrue(-5 == myCalculator.getTotal(), "Total != -5");
 		assertTrue("0 + 100 - 54 - 22 - 24 - 5".equals(myCalculator.toString()), "History");
 	}
+	
+	@Test
+	void testClear()
+	{
+		// test the initial value of myCalculator
+		AddingMachine myCalculator = new AddingMachine();
+		assertTrue(0 == myCalculator.getTotal(), "Initial Total != 0");
+
+		// adding 4
+		myCalculator.add(4);
+		assertTrue(4 == myCalculator.getTotal(), "Total != 4");
+		assertTrue("0 + 4".equals(myCalculator.toString()), "History");
+
+		// clearing
+		myCalculator.clear();
+		assertTrue(0 == myCalculator.getTotal(), "Total != 0");
+		assertTrue("0".equals(myCalculator.toString()), "History");
+	}
 
 	@Test
 	void test()
@@ -85,5 +103,4 @@ class AddingMachineTest
 		assertTrue(7 == myCalculator.getTotal(), "Total != 7");
 		assertTrue("0 + 4 - 2 + 5".equals(myCalculator.toString()), "History");
 	}
-
 }
